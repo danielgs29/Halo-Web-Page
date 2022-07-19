@@ -72,5 +72,14 @@ function renderVideos() {
     });
   
     videosContainer.innerHTML = html.join("");
-}
+
+    document.querySelectorAll(".item a").forEach((item) => {
+      item.addEventListener("click", (e) => {
+        e.preventDefault();
+        const id = +item.getAttribute("data-id");
+        current = id;
+        renderCurrentVideo(videos[current].id);
+      });
+    });
+  }
 

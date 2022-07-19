@@ -274,6 +274,73 @@ h3{
     border: solid 1px #00c3ff;
 }
 
+#videos #slider #videos-container{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    overflow: auto;
+}
+
+#videos #slider #videos-container .item{
+    border: solid 1px #00c3ff;
+    cursor: pointer;
+    overflow: hidden;
+    min-width: 240px;
+    height: 180px;
+}
+
+#videos #slider #videos-container .item a{
+    position: relative;  
+}
+
+#videos #slider #videos-container .item img{
+    object-fit: contain;
+    min-width: 240px;
+    height: 180px;
+}
+
+#videos #slider #videos-container .item:hover img{
+    transition:  opacity 0.3s ease;
+    opacity: 0.6;
+    object-fit: contain;
+}
+ 
+#videos #slider #videos-container .item a::before{
+    font-family: "Material Icons";
+    content: "play_arrow";
+    color: white;
+    position: absolute;
+    display: block;
+    left: 108px;
+    top: -95px;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+/* MULTIPLAYER */
+
+#multi-player{
+    height: 100vh;
+    background-image: url(images/bg-multiplayer.jpeg);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.info{
+    line-height: 1.2;
+    padding: 40px;
+    width: 600px;
+    margin-right: 50px;
+    
+}
 
 @media screen and (max-width:1132px){
 
@@ -293,6 +360,14 @@ h3{
         position: initial !important;
         z-index: 100;
         width: 100%;
+    }
+
+    #slider #current{
+        width: 80% !important;
+    }
+    
+    #slider #current iframe{
+        height: 500px;
     }
 }
 
@@ -322,5 +397,18 @@ h3{
     width: 100%;
 }
 
+#slider #current{
+    width: 90%;
+}
+
+#slider #current iframe {
+    height: 300px;
+  }
+
+  #slider #videos-container {
+    display: none !important;
+  }
+
+   
 
 }
