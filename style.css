@@ -235,7 +235,7 @@ h3{
 
 #videos{
     text-align: center;
-    padding: 50px 0;
+    padding: 20px 0;
     background-image: url(images/bg-videos.png);
     background-position: bottom center;
     background-repeat: no-repeat;
@@ -498,12 +498,13 @@ footer{
   
   #multi-player{
     background-position: -200px 0px;
+    align-items: center;
 }
   .info{
     width: 90%;
     margin: 0 auto;
   }
-   
+ 
   #get-the-game .item-store{
     display: flex;
     flex-direction: column;
